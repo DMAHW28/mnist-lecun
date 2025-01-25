@@ -80,35 +80,15 @@ After training, the model is expected to achieve approximately **99%** accuracy 
 
 ---
 
-## 🛠️ Technologies Used  
-- **Python 3.8+**  
-- **PyTorch / TensorFlow** (choose one)  
+## 🛠️ Technologies  
+- **Python 3.9**  
+- **PyTorch** 
 - **NumPy, Pandas**  
-- **Matplotlib / Seaborn** (for visualization)  
+- **Matplotlib / Seaborn**
 
 ## 📈 Results Visualization  
 Here are some example predictions after training:
 
-![Sample Predictions](https://raw.githubusercontent.com/your-repo/mnist-lenet/images/sample_predictions.png)
+![Sample Predictions](results.png)
 
 ---
-
-## ❓ Challenges & Potential Improvements  
-- Experimenting with deeper architectures (VGG, ResNet).  
-- Applying data augmentation techniques to improve generalization.  
-- Optimizing hyperparameters using tools like **Optuna**.  
-
----
-
-## 🤝 Contributing  
-Contributions are welcome! To contribute:  
-1. Fork the project  
-2. Create a new branch (`feature-name`)  
-3. Make your changes and commit them  
-4. Open a Pull Request  
-
----
-
-## 📚 License  
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
