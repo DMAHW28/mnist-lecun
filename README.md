@@ -47,8 +47,8 @@ python src/train.py --epochs 10 --batch_size 32 --lr 0.001
 ```
 
 ### 5. Evaluate the model  
-```run 
-notebooks/test.ipynb
+```
+jupyter notebook notebooks/test.ipynb
 ```
 
 ---
@@ -82,8 +82,8 @@ After training, the model is expected to achieve approximately **99%** accuracy 
 ---
 
 ## 🛠️ Technologies Used  
-- **Python 3.8+**  
-- **PyTorch / TensorFlow** (choose one)  
+- **Python 3.9**  
+- **PyTorch**
 - **NumPy, Pandas**  
 - **Matplotlib / Seaborn** (for visualization)  
 
