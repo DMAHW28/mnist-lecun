@@ -77,7 +77,7 @@ After training, the model is expected to achieve approximately **99%** accuracy 
 |----------------|----------------|
 | Accuracy       | ~99%             |
 | Loss           | < 0.05            |
-| Training Time  | ~5 minutes (GPU)  |
+| Training Time  | ~5 minutes (CPU)  |
 
 ---
 
