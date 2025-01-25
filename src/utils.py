@@ -18,6 +18,9 @@ def display(data, y):
         plt.imshow(data[i].reshape(h, w, c), cmap='gray')
         plt.title(f'predicted class: {y[i].item()}')
         plt.axis('off')
+
+    # Save the figure before displaying
+    plt.savefig('../results.png', bbox_inches='tight')
     plt.show()
 
 def display_stats(training_stats):
