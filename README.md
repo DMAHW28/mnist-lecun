@@ -7,17 +7,17 @@ The goal is to build a high-accuracy digit recognition model using deep learning
 ## 📁 Project Structure  
 ```
 mnist-lenet/
-👉 data/                  # Contains the MNIST dataset
-👉 models/                # Saved models
-👉 notebooks/             # Jupyter notebooks for training statistics and test model
-👉 src/                   # Project source code
-    👉 train.py           # Model training script
-    👉 utils.py           # Utility script for displaying data
-    👉 model.py           # LeNet-5 architecture definition
-    👉 preprocess.py      # Data preprocessing
-👉 requirements.txt       # List of required dependencies
-👉 README.md              # Project documentation
-👉 config.yaml            # Hyperparameter configuration
+data/                  # Contains the MNIST dataset
+models/                # Saved models
+notebooks/             # Jupyter notebooks for training statistics and test model
+src/                   # Project source code
+    train.py           # Model training script
+    utils.py           # Utility script for displaying data
+    model.py           # LeNet-5 architecture definition
+    preprocess.py      # Data preprocessing
+requirements.txt       # List of required dependencies
+README.md              # Project documentation
+config.yaml            # Hyperparameter configuration
 ```
 
 ---
@@ -81,11 +81,6 @@ After training, the model is expected to achieve approximately **99%** accuracy 
 
 ---
 
-## 🛠️ Technologies  
-- **Python 3.9**  
-- **PyTorch** 
-- **NumPy, Pandas**  
-- **Matplotlib / Seaborn**
 
 ## 📈 Results Visualization  
 Here are some example predictions after training:
@@ -93,3 +88,9 @@ Here are some example predictions after training:
 ![Sample Predictions](results.png)
 
 ---
+
+## 🛠️ Technologies  
+- **Python 3.9**  
+- **PyTorch** 
+- **NumPy, Pandas**  
+- **Matplotlib / Seaborn**
