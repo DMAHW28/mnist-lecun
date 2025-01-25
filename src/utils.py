@@ -1,36 +1,58 @@
 import numpy as np
+import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 
 def display(data, y):
+    """
+    Display images with their predicted classes.
+    :param data: Image data (tensor or numpy array)
+    :param y: Predicted classes
+    """
     img_num = min(len(data), 32)
     c, h, w = data[0].shape
-    plt.figure(figsize=(img_num/4, img_num/2))
+    plt.figure(figsize=(img_num / 4, img_num / 2))
     for i in range(img_num):
-        plt.subplot(8,4,i+1)
+        plt.subplot(8, 4, i + 1)
+        # Display the image and the predicted class as the title
         plt.imshow(data[i].reshape(h, w, c), cmap='gray')
         plt.title(f'predicted class: {y[i].item()}')
         plt.axis('off')
     plt.show()
 
 def display_stats(training_stats):
-    epochs = np.arange(1, len(training_stats["train_acc"])+1)
+    """
+    Display training and validation statistics (accuracy and loss) over epochs.
+    :param training_stats: Dictionary containing the training statistics
+    """
+    epochs = np.arange(1, len(training_stats["train_acc"]) + 1)  # Create an array for epochs
 
-    # summarize history for accuracy
-    plt.subplot(211)
-    plt.plot(epochs, training_stats['train_acc'])
-    plt.plot(epochs, training_stats['valid_acc'])
-    plt.title('model accuracy')
-    plt.ylabel('accuracy')
-    plt.xlabel('epoch')
-    plt.legend(['train', 'valid'], loc='upper left')
+    # Convert stats to a pandas DataFrame for easier plotting with seaborn
+    import pandas as pd
+    stats_df = pd.DataFrame({
+        'Epoch': epochs,
+        'Train Accuracy': training_stats['train_acc'],
+        'Validation Accuracy': training_stats['valid_acc'],
+        'Train Loss': training_stats['train_losses'],
+        'Validation Loss': training_stats['valid_losses']
+    })
+
+    # Create the accuracy plot
+    plt.figure(figsize=(10, 6))
+    sns.lineplot(x='Epoch', y='Train Accuracy', data=stats_df, label='Train Accuracy', color='blue')
+    sns.lineplot(x='Epoch', y='Validation Accuracy', data=stats_df, label='Validation Accuracy', color='orange')
+    plt.title('Model Accuracy')
+    plt.xlabel('Epoch')
+    plt.ylabel('Accuracy')
+    plt.legend(loc='upper left')
     plt.show()
 
-    # summarize history for loss
-    plt.subplot(212)
-    plt.plot(epochs, training_stats['train_losses'])
-    plt.plot(epochs, training_stats['valid_losses'])
-    plt.title('model loss')
-    plt.ylabel('loss')
-    plt.xlabel('epoch')
-    plt.legend(['train', 'valid'], loc='upper left')
+    # Create the loss plot
+    plt.figure(figsize=(10, 6))
+    sns.lineplot(x='Epoch', y='Train Loss', data=stats_df, label='Train Loss', color='blue')
+    sns.lineplot(x='Epoch', y='Validation Loss', data=stats_df, label='Validation Loss', color='orange')
+    plt.title('Model Loss')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.legend(loc='upper left')
     plt.show()
