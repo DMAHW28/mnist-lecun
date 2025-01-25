@@ -81,7 +81,7 @@ After training, the model is expected to achieve approximately **99%** accuracy 
 
 ---
 
-## 🛠️ Technologies Used  
+## 🛠️ Technologies  
 - **Python 3.9**  
 - **PyTorch**
 - **NumPy, Pandas**  
