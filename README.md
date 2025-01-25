@@ -5,6 +5,7 @@ The goal is to build a high-accuracy digit recognition model using deep learning
 ---
 
 ## 📁 Project Structure  
+```
 mnist-lenet/
 👉 data/                  # Contains the MNIST dataset
 👉 models/                # Saved models
@@ -17,7 +18,7 @@ mnist-lenet/
 👉 requirements.txt       # List of required dependencies
 👉 README.md              # Project documentation
 👉 config.yaml            # Hyperparameter configuration
-
+```
 
 ---
 
