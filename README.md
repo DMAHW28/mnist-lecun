@@ -48,6 +48,7 @@ python src/train.py --epochs 10 --batch_size 32 --lr 0.001
 
 ### 5. Evaluate the model  
 ```bash
+jupyter notebook notebooks/train.ipynb
 jupyter notebook notebooks/test.ipynb
 ```
 
