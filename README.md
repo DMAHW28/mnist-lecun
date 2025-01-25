@@ -19,7 +19,6 @@ mnist-lenet/
     👉 preprocess.py      # Data preprocessing
 👉 requirements.txt       # List of required dependencies
 👉 README.md              # Project documentation
-👉 config.yaml            # Hyperparameter configuration
 ```
 
 ---
