@@ -28,7 +28,7 @@ mnist-lenet/
 
 ### 1. Clone the repository  
 ```bash
-git clone https://github.com/your-username/mnist-lenet.git
+git clone https://github.com/DMAHW28/mnist-lenet.git
 cd mnist-lenet
 ```
 
