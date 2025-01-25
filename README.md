@@ -24,29 +24,31 @@ mnist-lenet/
 ## 🚀 Installation & Usage  
 
 ### 1. Clone the repository  
-bash
+```bash
 git clone https://github.com/your-username/mnist-lenet.git
 cd mnist-lenet
+```
 
 
 ### 2. install dependencies  
-bash
+```bash
 pip install -r requirements.txt
-
+```
 
 ### 3. Download the MNIST dataset  
 The dataset will be automatically downloaded when running the script.  
 Alternatively, you can manually download it from [Yann LeCun's website](http://yann.lecun.com/exdb/mnist/).
 
 ### 4. Train the model  
-bash
+```bash
 python src/train.py --epochs 10 --batch_size 32 --lr 0.001
-
+```
 
 ### 5. Evaluate the model  
-run 
-notebooks/test.ipynb
-
+```bash
+jupyter notebook notebooks/train.ipynb
+jupyter notebook notebooks/test.ipynb
+```
 
 ---
 
