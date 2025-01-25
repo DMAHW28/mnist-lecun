@@ -11,10 +11,10 @@ The goal is to build a high-accuracy digit recognition model using deep learning
 mnist-lenet/
 👉 data/                  # Contains the MNIST dataset
 👉 models/                # Saved models
-👉 notebooks/             # Jupyter notebooks for data exploration
+👉 notebooks/             # Jupyter notebooks for training statistics and test model
 👉 src/                   # Project source code
     👉 train.py           # Model training script
-    👉 test.py            # Model evaluation script
+    👉 utils.py           # Utility script for displaying data
     👉 model.py           # LeNet-5 architecture definition
     👉 preprocess.py      # Data preprocessing
 👉 requirements.txt       # List of required dependencies
@@ -32,10 +32,8 @@ git clone https://github.com/your-username/mnist-lenet.git
 cd mnist-lenet
 ```
 
-### 2. Create a virtual environment and install dependencies  
+### 2. install dependencies  
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -49,13 +47,15 @@ python src/train.py --epochs 10 --batch_size 32 --lr 0.001
 ```
 
 ### 5. Evaluate the model  
-```bash
-python src/test.py --model_path models/lenet_mnist.pth
+```run 
+notebooks/test.ipynb
 ```
 
 ---
 
 ## 🏋️ Model Architecture (LeNet-5)  
+![LeNet5](https://miro.medium.com/max/2000/1*1TI1aGBZ4dybR6__DI9dzA.png)
+
 The model is based on the LeNet-5 architecture, which consists of the following layers:
 
 1. **Input**: 28x28 grayscale images  
@@ -66,6 +66,7 @@ The model is based on the LeNet-5 architecture, which consists of the following 
 6. **C5 - Fully Connected** (120 neurons)  
 7. **F6 - Fully Connected** (84 neurons)  
 8. **Output Layer** (10 neurons, softmax for classification)
+
 
 ---
 
@@ -87,30 +88,3 @@ After training, the model is expected to achieve approximately **99%** accuracy 
 - **Matplotlib / Seaborn** (for visualization)  
 
 ---
-
-## 📈 Results Visualization  
-Here are some example predictions after training:
-
-![Sample Predictions](https://raw.githubusercontent.com/your-repo/mnist-lenet/images/sample_predictions.png)
-
----
-
-## ❓ Challenges & Potential Improvements  
-- Experimenting with deeper architectures (VGG, ResNet).  
-- Applying data augmentation techniques to improve generalization.  
-- Optimizing hyperparameters using tools like **Optuna**.  
-
----
-
-## 🤝 Contributing  
-Contributions are welcome! To contribute:  
-1. Fork the project  
-2. Create a new branch (`feature-name`)  
-3. Make your changes and commit them  
-4. Open a Pull Request  
-
----
-
-## 📚 License  
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
