@@ -6,18 +6,18 @@ class LecunModel(nn.Module):
 
         # Feature extraction: convolution + pooling layers + fully connected
         self.features = nn.Sequential(
-            # Conv layer 1: (1, 32, 32) -> (6, 28, 28)
+            # Conv layer 1: (1, 28, 28) -> (6, 26, 26)
             nn.Conv2d(in_channels=1, out_channels=6, kernel_size=5, stride=1, padding=1),
             nn.ReLU(),  # ReLU activation
 
-            # MaxPool 1: (6, 28, 28) -> (6, 14, 14)
+            # MaxPool 1: (6, 26, 26) -> (6, 13, 13)
             nn.MaxPool2d(kernel_size=2, stride=2),
 
-            # Conv layer 2: (6, 14, 14) -> (16, 10, 10)
+            # Conv layer 2: (6, 13, 13) -> (16, 11, 11)
             nn.Conv2d(in_channels=6, out_channels=16, kernel_size=5, stride=1, padding=1),
             nn.ReLU(),  # ReLU activation
 
-            # MaxPool 2: (16, 10, 10) -> (16, 5, 5)
+            # MaxPool 2: (16, 11, 11) -> (16, 5, 5)
             nn.MaxPool2d(kernel_size=2, stride=2),
 
             nn.Flatten(),  # Flatten 3D to 1D for fully connected layers
