@@ -20,7 +20,8 @@ class LecunModel(nn.Module):
             # MaxPool 2: (16, 11, 11) -> (16, 5, 5)
             nn.MaxPool2d(kernel_size=2, stride=2),
 
-            nn.Flatten(),  # Flatten 3D to 1D for fully connected layers
+            # Flatten 3D to 1D for fully connected layers
+            nn.Flatten(),
 
             # Fully connected layers
             nn.Linear(16 * 5 * 5, 120),
